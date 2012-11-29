@@ -2,7 +2,7 @@ require 'sinatra'
 require 'redis'
 
 # include :key, :value
-get '/set' do
+post '/set' do
   redis = Redis.new
   redis.set(params[:key], params[:value])
 end
