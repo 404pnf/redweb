@@ -1,6 +1,10 @@
 require 'sinatra'
 require 'redis'
 
+before do
+  content_type 'text/plain'
+end
+
 # include :key, :value
 post '/set' do
   redis = Redis.new
