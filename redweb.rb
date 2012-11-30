@@ -3,6 +3,7 @@ require 'redis'
 
 before do
   content_type 'text/plain'
+  response.headers["Access-Control-Allow-Origin"] = "*"
 end
 
 # include :key, :value
